@@ -3,3 +3,9 @@
 # Пример ввода
 # яблоки сливы груши персики манго киви апельсины
 # 34 56 23 89 55 32 11
+keys_input = input("Введите слова (ключи): ")
+values_input = input("Введите числа (значения): ")
+keys = keys_input.split()
+values = list(map(int, values_input.split()))
+result = dict(zip(keys, values))
+print(result)

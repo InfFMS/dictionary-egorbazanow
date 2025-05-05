@@ -6,3 +6,10 @@
 # Абракадабра
 # Вывод
 # а-5 б-2 д-1 к-1 р-2
+text = input("Введите строку: ")
+text = text.lower()
+counter = {}
+for char in text:
+    counter[char] = counter.get(char, 0) + 1
+for key, value in counter.items():
+    print(f"{key}-{value}", end=" ")
