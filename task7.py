@@ -6,3 +6,15 @@
 # Первый словарь: {'a': 100, 'b': 200, 'c':300}
 # Второй словарь: {'a': 300, 'b': 200, 'd':400}
 # Результат: {'a': 400, 'b': 400, 'd': 400, 'c': 300}
+dict1 = {'a': 100, 'b': 200, 'c': 300}
+dict2 = {'a': 300, 'b': 200, 'd': 400}
+
+result = dict1.copy()
+
+for key, value in dict2.items():
+    if key in result:
+        result[key] += value
+    else:
+        result[key] = value
+
+print(result)
